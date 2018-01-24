@@ -591,6 +591,10 @@ objects:
             value: probe.eap.jolokia.EapProbe
           - name: PROBE_DISABLE_BOOT_ERRORS_CHECK
             value: 'true'
+          - name: OPENSHIFT_KUBE_PING_NAMESPACE
+            value: "${IMAGE_STREAM_NAMESPACE}"
+          - name: OPENSHIFT_KUBE_PING_LABELS
+            value: "application=${APPLICATION_NAME}"
           - name: JAVA_OPTS_APPEND
             value: "${JAVA_OPTS_APPEND}"
         volumes:
